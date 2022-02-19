@@ -73,7 +73,7 @@ void loop() {
   Serial.print(tempCel);
 
   // Calculate the temperature in Fahrenheit
-  float tempFahr = tempCel * (9/5) + 32;
+  float tempFahr = tempCel * 9/5 + 32;
   // Print the value to the serial output
   Serial.print("\tTemp in Fahrenheit: ");
   Serial.print(tempFahr);
