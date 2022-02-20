@@ -84,12 +84,16 @@ void loop() {
     Serial.print("\tTemp High");
     // Turn on the LED marking a high temp
     digitalWrite(ledHigh, HIGH);
+    // Turn off other LED
+    digitalWrite(ledLow, LOW);
   }
   else if(tempVolt > preVal){// If the current voltage is higher; then the temp is lower
     // Print to serial that the temp is low
     Serial.print("\tTemp Low");
     // Turn on the LED marking a low temp
     digitalWrite(ledLow, HIGH);
+    // Turn off other LED
+    digitalWrite(ledHigh, LOW);
   }
   else{ // If the Voltage is equal; then the temp is stable
     // Print to serial that the temp is stable
@@ -106,8 +110,4 @@ void loop() {
   
   // 2.5 second delay between loop cycles
   delay(2500);
-
-  // turn off the LEDs
-  digitalWrite(ledHigh, LOW);
-  digitalWrite(ledLow, LOW);
 }
