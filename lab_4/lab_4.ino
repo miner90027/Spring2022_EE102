@@ -7,7 +7,7 @@
  */
 
 /******************************************/
-/***          Globa Variables           ***/
+/***          Global Variables           ***/
 /******************************************/
 // Constant values deterined by Thermistor spec sheet
 int B = 4100;
